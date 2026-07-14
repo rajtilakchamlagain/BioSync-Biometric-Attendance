@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioSync Attendance</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BioSync Portal</h1>
+            <p>Employee Biometric Attendance System</p>
+        </header>
+
+        <main>
+            <div id="reader-container">
+                <div id="reader"></div> 
+            </div>
+            
+            <div id="result-box">
+                <p id="result">Waiting for QR scan...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="scanner.js"></script>
+</body>
+</html>
