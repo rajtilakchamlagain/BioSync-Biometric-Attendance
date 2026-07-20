@@ -1,4 +1,4 @@
-* {
+﻿* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -10,51 +10,147 @@ body {
     color: #333;
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding: 40px 20px;
 }
 
 .container {
     background-color: #fff;
     width: 100%;
-    max-width: 600px;
+    max-width: 760px;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
 }
 
 header h1 {
     color: #2c3e50;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 header p {
     color: #7f8c8d;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     font-size: 0.95em;
 }
 
-#reader-container {
-    margin: 0 auto 20px auto;
-    border: 2px solid #bdc3c7;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #fafafa;
-}
-
-#result-box {
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #f8f9fa;
+.status-box {
+    padding: 18px 20px;
+    border-radius: 10px;
     border: 1px solid #dee2e6;
-    min-height: 60px;
+    background-color: #f8f9fa;
+    margin-bottom: 24px;
+    text-align: center;
+    min-height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#result {
-    font-size: 1.1em;
-    font-weight: 600;
+.reader-container,
+.camera-container,
+.user-card {
+    border: 1px solid #dde1e7;
+    border-radius: 14px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.reader-container {
+    min-height: 360px;
+}
+
+.user-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.user-card h2 {
+    margin-bottom: 6px;
+}
+
+.user-card p {
     color: #555;
+    margin-bottom: 6px;
+}
+
+.attendance-summary h3 {
+    margin-bottom: 14px;
+}
+
+#attendance-logs {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#attendance-logs th,
+#attendance-logs td {
+    border: 1px solid #e9ecef;
+    padding: 10px;
+    text-align: left;
+}
+
+#attendance-logs th {
+    background-color: #f0f4f8;
+}
+
+#attendance-logs tbody tr:nth-child(even) {
+    background-color: #fbfcfe;
+}
+
+.user-actions,
+.camera-controls {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+.camera-container video {
+    width: 100%;
+    max-height: 340px;
+    border-radius: 14px;
+    background-color: #000;
+}
+
+#camera-status {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 16px;
+}
+
+.btn {
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: #0056b3;
+    color: #fff;
+    min-width: 150px;
+}
+
+.btn.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 720px) {
+    .container {
+        padding: 20px;
+    }
+
+    .user-card-header,
+    .user-actions,
+    .camera-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }

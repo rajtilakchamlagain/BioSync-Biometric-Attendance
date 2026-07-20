@@ -1,6 +1,0 @@
-\# BioSync Project
-
-
-
-Coming Soon...
-

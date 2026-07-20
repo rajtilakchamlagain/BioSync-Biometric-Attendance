@@ -15,16 +15,51 @@
         </header>
 
         <main>
-            <div id="reader-container">
-                <div id="reader"></div> 
+            <div id="status-box" class="status-box">
+                <p id="result">Initializing...</p>
             </div>
-            
-            <div id="result-box">
-                <p id="result">Waiting for QR scan...</p>
+
+            <div id="reader-container" class="reader-container" style="display:none;">
+                <div id="reader"></div>
+            </div>
+
+            <div id="user-card" class="user-card" style="display:none;">
+                <div class="user-card-header">
+                    <div>
+                        <h2 id="user-name"></h2>
+                        <p id="user-token"></p>
+                        <p id="user-action"></p>
+                    </div>
+                </div>
+
+                <div class="attendance-summary">
+                    <h3>Recent Attendance</h3>
+                    <table id="attendance-logs">
+                        <thead>
+                            <tr><th>Date</th><th>In Time</th><th>In Status</th><th>Out Time</th><th>Out Status</th><th>Duration Status</th></tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div class="user-actions">
+                    <button id="in-button" class="btn">Clock IN (Face Verify)</button>
+                    <button id="out-button" class="btn">Clock OUT (Face Verify)</button>
+                    <button id="retry-button" class="btn btn-secondary" style="margin-top: 10px;">Scan a different QR</button>
+                </div>
+            </div>
+
+            <div id="camera-container" class="camera-container" style="display:none;">
+                <p id="camera-status">📷 Camera preview will appear here.</p>
+                <video id="camera" autoplay playsinline muted></video>
+                <div id="camera-controls" class="camera-controls" style="display:none;">
+                    <button id="capture-button" class="btn" disabled>Capture Face</button>
+                    <button id="cancel-camera-button" class="btn btn-secondary">Cancel</button>
+                </div>
             </div>
         </main>
     </div>
 
-    <script src="scanner.js"></script>
+    <script src="scanner.js?v=2"></script>
 </body>
 </html>
